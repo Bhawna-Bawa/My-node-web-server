@@ -4,6 +4,8 @@ const fs = require('fs');
 
 var app = express();
 
+const port = process.env.PORT || 3000;
+
 hbs.registerPartials(__dirname + '/views/partials');
 app.set('view engine' , 'hbs');
 //Using middleware
@@ -78,8 +80,8 @@ app.get('/bad', (req, res) =>{
         statusCode : 200
     });
 });
-app.listen(3000, () =>{
+app.listen(port, () =>{
 
-    console.log('Server is up on port 3000');
+    console.log(`Server is up on port ${port}`);
 });
 
