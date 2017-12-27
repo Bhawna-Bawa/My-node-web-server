@@ -27,7 +27,7 @@ app.use((req, res, next) =>{
 
 app.use((req,res,next) => {
     res.render('maintainance.hbs');
-    
+    next();    
 });
 
 // To use javascript functions
