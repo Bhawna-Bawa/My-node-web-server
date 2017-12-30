@@ -81,6 +81,13 @@ app.get('/bad', (req, res) =>{
         statusCode : 200
     });
 });
+
+app.get('/projects', (req,res) => {
+    res.render('projects.hbs', {
+        projectTitle : 'My Projects',
+        welcomeMessage : 'Here are all the projects'
+    });
+});
 app.listen(port, () =>{
 
     console.log(`Server is up on port ${port}`);
